@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WordRepetitionMapCreator {
-    private static final String regex = "\\s*[^(a-zA-Z_0-9)]+\\s*";
+    private static final String regex = "\\s*[\\W]+\\s*";
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
         if (!validate(sentence))
             return new HashMap<>();
