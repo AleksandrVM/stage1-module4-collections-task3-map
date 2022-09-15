@@ -1,15 +1,14 @@
 package com.epam.mjc.collections.map;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class WordRepetitionMapCreator {
-    private static final String regex = "\\s*[\\W]+\\s*";
+    private static final String REGEX = "\\s*[\\W]+\\s*";
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
         if (!validate(sentence))
             return new HashMap<>();
 
-        String[] words = sentence.toLowerCase().split(regex);
+        String[] words = sentence.toLowerCase().split(REGEX);
 
         Map<String, Integer> duplicateWordCounter = new HashMap<>();
         for (String word : words) {
